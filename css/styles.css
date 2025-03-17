@@ -1,0 +1,237 @@
+/* Apply a gradient background */
+body {
+    background: linear-gradient(to right, #43234f, #b39fb9);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    padding: 10px;
+    background-color: #ada1a1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Logo styling */
+nav .logo {
+    max-width: 120px;
+}
+
+/* Style the chat container */
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #c3b1c4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 80vh; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+/* Chat box container */
+.chat-box {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enables scrolling */
+    margin-bottom: 20px; /* Space between chat box and forms */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style messages */
+.message {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    position: relative;
+    max-width: 75%;
+    clear: both;
+    word-wrap: break-word; /* Ensure long words break and do not overflow */
+}
+
+/* Different styles for incoming and outgoing messages */
+.message.left {
+    float: left;
+    background-color: #dcdcdc;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 15px 15px 15px 5px;
+}
+
+.message.right {
+    float: right;
+    background-color: #e3f2fd;
+    color: #333;
+    text-align: right;
+    border: 1px solid #b3e5fc;
+    border-radius: 15px 15px 5px 15px;
+}
+
+/* Style buttons and forms */
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat message input */
+#message-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-width: 100%; /* Ensures full width on mobile */
+}
+
+/* Send message button */
+#chat-form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#chat-form button:hover {
+    background: #0056b3;
+}
+
+/* File form styling */
+#file-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#file-form input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#file-form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#file-form button:hover {
+    background: #0056b3;
+}
+
+/* Style for start call button */
+#start-call {
+    background-color: #43234f;
+    color: white;
+    margin: 0 auto; /* Center horizontally */
+    height: 3rem;
+    width: 10rem; /* Adjusted to a more reasonable width */
+    border: solid rgb(202, 142, 162);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-call:hover {
+    background-color: #8a6597;
+    cursor: pointer;
+}
+
+/* Style for end call button */
+#end-call {
+    background-color: #c61010;
+    color: rgb(10, 9, 9);
+    height: 3rem;
+    width: 10rem; /* Adjusted to a more reasonable width */
+    border: solid rgb(22, 21, 21);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center horizontally */
+}
+
+#end-call:hover {
+    background-color: #88071b;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chat-container {
+        max-width: 100%;
+        height: 70vh; /* Adjusted for smaller screens */
+    }
+
+    .chat-box {
+        margin-bottom: 10px; /* Reduced margin for mobile */
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #message-input,
+    #file-form input[type="file"],
+    #chat-form button,
+    #file-form button {
+        width: 100%;
+        margin-bottom: 10px; /* Space between inputs/buttons */
+    }
+
+    #start-call,
+    #end-call {
+        width: 100%;
+        margin: 10px auto; /* Center horizontally with margin */
+    }
+
+    .video-call-container {
+        max-width: 100%;
+    }
+
+    .video-wrapper {
+        flex-direction: column;
+    }
+
+    video {
+        max-width: 100%;
+    }
+    
+
+    
+}

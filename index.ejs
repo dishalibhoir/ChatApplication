@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <h3>Welcome, <%= name %> (<%= email %>)</h3>
+    </nav>
+
+    <div class="container">
+        <!-- Chat Messages Container -->
+        <div class="chat-container">
+            <div class="messages">
+                <!-- Messages will be appended here -->
+            </div>
+        </div>
+
+        <!-- Form for Sending Messages and Uploading Files -->
+        <div class="form-container">
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="message-input" placeholder="Type a message" autocomplete="off" spellcheck="true">
+                <button type="submit">Send</button>
+            </form>
+
+            <form id="file-form" class="file-form">
+                <input type="file" id="file-input">
+                <button type="submit">Upload File</button>
+            </form>
+        </div>
+
+        <!-- Video Call Section -->
+        <div class="video-call-container">
+            <div class="video-wrapper">
+                <video id="local-video" autoplay playsinline muted></video>
+                <video id="remote-video" autoplay playsinline></video>
+            </div>
+            <div class="call-controls offset-4">
+                <button id="start-call">Start Video Call</button>
+                <button id="end-call" disabled>End Video Call</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
